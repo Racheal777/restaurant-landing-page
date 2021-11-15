@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Navbar */
+#wrapper{
+    overflow: hidden;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    min-height: 80;
+    z-index: 2;
+    
+
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 2.5em;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    
+    
+}
+.text{
+    position: absolute;
+    top: 10em;
+    color: white;
+    padding: 5em;
+    text-align: left;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+.text p{
+    font-size: 3em;
+    font-weight: lighter;
+    letter-spacing: 0.5px;
+    top: 8em;
+}
+
+.texts{
+   font-size:5em;
+   line-height: 1.2;
+   letter-spacing: 0.5px;
+  
+    
+
+}
+header {
+    background-image: url('/images/restaurant.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    min-height: 130vh;
+}
+.content {
+    position: absolute;
+    left: 4em;
+    top: 35em;
+    display: flex;
+}
+.card{
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 25px;
+    padding: 10px;
+    width: 60%;
+    
+}
+
+
+.container{
+    padding: 2px 16px;
+    
+}
+
+.section-body{
+    background-color: rgb(201, 197, 193);
+    height: 50vh;
+    font-family: 'Roboto', sans-serif;
+   
+    
+
+}
+
+.story{
+    max-width: 35%;
+    padding-top: 2em;
+    text-align: center;
+
+}
+
+.story h1{
+    font-size: 24px;
+    font-weight: 100;
+    color: rgb(61, 58, 47);
+    padding: 1em;
+}
+
+.story p{
+    padding: 1.2em;
+    color: rgb(61, 58, 47);
+    letter-spacing: 0.5px;
+    line-height: 1.45em;
+    font-size: 16px; 
+}
+.menu{
+    background-image: url('images/checked_menu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 60vh;
+    position: relative; 
+}
+
+.menu-story{
+    font-family: 'Roboto', sans-serif; 
+   
+    color: white;
+}
+
+.menu-story h2{
+    font-size: 70px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 70px;
+    
+}
+
+
+br{
+    font-weight: bolder;
+}
+
+.menu-story p{
+    padding: 2.0em;
+    margin: 10px;
+    font-size: 20px;
+
+   
+
+}
+
+.block{
+  display: block;
+  
+  border: none;
+  background-color: #d3981a;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  margin: 20px;
+}
