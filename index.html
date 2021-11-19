@@ -4,27 +4,34 @@
     <title>RESTAURANT PAGE</title>
     <link href="index.css" rel= "stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
-</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src = "query.js"></script>
+
+    </head>
 
 
-<body>
-        <div class="wrapper">
+    <body>
+        <header>
+        <div id="wrapper">
             <nav>
                 <img src="/images/restaurant_logo.png" alt ="logo" >
-            <ul>
+            <ul class="myLinks">
                 
                 <li><a href="#">Our Story</a></li>
                 <li><a href="#">Menu</a></li>
                 <li><a href="#">Features</a></li>
                 <li><a href="#">Testimonials</a></li>
                 <li><a href="#">Book a Table</a></li>
+                <!-- <a href="javascript:void(0);" class="icon" onclick="ham()">
+                    <i class="fa fa-bars"></i>
+                  </a> -->
             </ul>
         </nav>
         </div>
 
 
-    <header>
-        <div class ="text">
+       
+         <div class ="text">
             <p>Because</p>
             <h2 class="texts"> YOU'RE <br> WORTH IT </h2>
         </div>
@@ -66,37 +73,235 @@
                             <p>$9.99</p>
                         </div>
                         </div>
-        </div>
+             </div>
 
 
 
-    </header>
+        </header>
 
-    <section>
-        <div class="section-body">
-        <div class="story">
+        <section>
+            <div class="section-body">
+            <div class="story">
             <h1>Discover Our Story</h1>
             <p>In our work we try to use the most modern, convenient
                 and interesting solutions.We want the template you downloaded
                 look unique and new for such a long time as it is possible
             </p>
-        </div>
-        </div>
-    </section>  
+            
+            </div>
+            </div>
+        </section>  
 
-    <div class="menu">
+        <div class="menu">
 
         <div class="menu-story">
         <h2>WHAT TO EAT ?
-            <br>ENJOY OUR MENU</h2></h2>
+            <br><span>ENJOY OUR MENU</span></h2>
         
 
         <P>More than 250 dishes and 300 drinks for you</P>
 
-        <button type="button" class="block">View Menu</button> 
-    </div>
-    </div>
+        
+        <a href="#" class="menu-btn"><i class="icon icon-notebook"></i>View Menu</a>
+        </div>
 
+        </div>
+
+
+        <section class="features">
+            <div class="feature">
+                <div class="feature-post">
+                    <div>
+                        <img src="images/hot_food.png" alt="">
+                    </div>
+                    <div>
+                        <h2>Fully Responsive</h2>
+                    </div>
+                    <div>
+                        <p>Your project looks great on any device. Content can be easily read and a user understands
+                            freely
+                            what you wanted to say to him or her.</p>
+                    </div>
+                </div>
+                <div class="feature-post">
+                    <div>
+                        <img src="images/feature-food3.png" alt="">
+                    </div>
+                    <div>
+                        <h2>Pure & Simple</h2>
+                    </div>
+                    <div>
+                        <p>No fluff. Nothing should lead the visitor away from the main essence of website. 
+                            There must be just important information.</p>
+                    </div>
+                </div>
+                <div class="feature-post">
+                    <div>
+                        <img src="images/feature-food5.png" alt="food">
+                    </div>
+                    <div>
+                        <h2>Color Schemes</h2>
+                    </div>
+                    <div>
+                        <p>The set of ready made CSS files with different color 
+                            schemes will help you in quick landing’s adaptation according to your benchmark style.</p>
+                    </div>
+                </div>
+                <div class="feature-post last">
+                    <div>
+                        <img src="images/feature-food2.png" alt="food">
+                    </div>
+                    <div>
+                        <h2>PSD is Included</h2>
+                    </div>
+                    <div>
+                        <p>The graphic source file in PSD format is included in the archive.</p>
+                    </div>
+                </div>
+                <div class="feature-post last">
+                    <div>
+                        <img src="images/feature-food4.png" alt="food">
+                    </div>
+                    <div>
+                        <h2>Documentation</h2>
+                    </div>
+                    <div>
+                        <p>The detailed documentation will help you in adjusting 
+                            the project with little effort according to your requirements.</p>
+                    </div>
+                </div>
+                <div class="feature-post last">
+                    <div>
+                        <img src="images/feature-food6.png" alt="food">
+                    </div>
+                    <div>
+                        <h2>MultiPlatform</h2>
+                    </div>
+                    <div>
+                        <p>The page is adapted to the most of the popular 
+                            platform in segment..</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="reviews">
+            <div>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="review">
+                <p>I always thought that people used to pay much for quality. But these guys changed <br> opinion. The
+                    quality exceeds the price many times. I recommend it to everybody.</p>
+            </div>
+        </section>
+
+
+        <section class="customer">
+
+            <div class="customers">
+
+                <div class="icons">
+                    <i class="fa-regular fa-address-book" style="opacity: 0.5;"></i>
+                    <h2>256</h2>
+                    <p>Dishes</p>
+                </div>
+
+                <div class="icons">
+                    <i class="fa-solid fa-wine-glass"style="opacity: 0.5;"></i>
+                    <h2>301</h2>
+                    <p>Drinks</p>
+                </div>
+
+                <div class="icons">
+                    <i class="fa-regular fa-face-smile"style="opacity: 0.5;"></i>
+                    <h2>721</h2>
+                    <p>Happy Clients</p>
+                </div>
+
+                <div class="icons">
+                    <i class="fa-regular fa-heart"style="opacity: 0.5;"></i>
+                    <h2>378</h2>
+                    <p>Likes</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="table">
+            <div class="ltable">
+                <h2>Book a Table</h2>
+                <hr>
+                <form>
+
+                    <input type="text" id="name" placeholder="Full name">
+                    <hr>
+
+                    <input type="text" id="email" placeholder="Email Address">
+                    <hr>
+
+                    <input type="text" id="message" placeholder="Your message">
+                    <hr>
+
+                    <div class="btn-container">
+                        <button class="button2"><i class="far fa-edit" style="color:#fff;"></i>Book</button>
+                    </div>
+                    
+                </form>
+            </div>
+
+
+            <div class="rtable">
+                <p>In our work we try to use only the most modern, convenient
+                    and interesting solutions. We want the
+                    template you downloaded look unique and new for such a long time as it is possible</p>
+                <div>
+                </br>
+                    <p><i class="far fa-clock"style="opacity: 0.5;"></i> </br>10:00 - 23:00(Mon-Sun)</p>
+                    <p><i class="fas fa-map-marker-alt"style="opacity: 0.5;"></i> </br>300 Boylstone Ave E, Seattle WA</p>
+                    <p><i class="fas fa-phone"style="opacity: 0.5;"></i></br> 732-555-1428(Callback)</p>
+                    <p><i class="fas fa-envelope"style="opacity: 0.5;"></i></br>your@email.com</p>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+                    
+                   
+            <div class="footer-text"> 
+                            <img src="images/footer-logo.png"/>
+                            <div class="t">
+                                <p>@ 2021 Select</p> </br>
+                                <p>Designed by Racheal</p>
+                            </div>
+                            
+                     </div>
+                        
+
+                    <ul>
+                    <li><i class="fa fa-twitter " style=" font-size:26px"></i></li>
+                
+                    <li><i class="fa fa-facebook " style=" font-size:26px"></i>
+                        <li><i class="fa fa-dribbble " style=" font-size:26px"></i></li>
+                        <li><i class="fa fa-linkedin " style=" font-size:26px"></i></li>
+                        <li><i class="fa fa-pinterest " style=" font-size:26px"></i></li>
+                        <li><i class="fa fa-instagram " style=" font-size:26px"></i></li>
+                        <li><i class="fa fa-google-plus " style=" font-size:26px"></i></li>
+                        <li><i class="fa fa-flicke " style=" font-size:26px"></i></li>
+                        <li><i class="fa fa-behance " style=" font-size:26px"></i></li>
+                    </ul>
+         
+            
+        </footer>
+
+    <script src="site.js"></script>
 
     </body>
 </html>
