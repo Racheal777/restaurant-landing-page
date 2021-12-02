@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 
@@ -15,9 +16,9 @@
 nav.sticky{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     position: fixed;
-    width: 100%;
+  
     min-height: 80;
     z-index: 2;
    
@@ -29,8 +30,19 @@ nav.sticky{
 nav ul{
     list-style-type: none;
     display: flex;
-    gap: 1.5em;
+    gap: 1.3em;
+   
 
+}
+.navv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    min-height: 80;
+    z-index: 2;
+   
 }
 
 nav ul li a {
@@ -39,6 +51,19 @@ nav ul li a {
     font-size: 1em;
     
     
+}
+.hamburger{
+    display: none;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 24px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #1570f8;
 }
 .text{
     position: absolute;
@@ -69,20 +94,22 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    min-height: 150vh;
+    height: 170vh;
+    width: 100%;
+    overflow-y: hidden;
 }
 .content {
     position: absolute;
     left: 4em;
-    top: 35em;
+    top: 40em;
     display: flex;
 }
 .card{
     border: 0.5px solid rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    margin: 25px;
+    margin: 15px;
     padding: 10px;
-    width: 60%;
+    /* width: 60%; */
     
 }
 
@@ -94,11 +121,9 @@ header {
 
 .section-body{
     background-color: rgb(201, 197, 193);
-    height: 70vh;
+    /* height: 70vh; */
     font-family: 'Roboto', sans-serif;
-    background-image: url('images/bg2.png');
-    background-position: center;
-    background-repeat: no-repeat;
+    
 }
 
 .story{
@@ -110,8 +135,6 @@ header {
     margin: auto;
 
 }
-
-
 
 .story h1{
     font-size: 24px;
@@ -132,16 +155,19 @@ header {
     background-attachment: fixed;
     min-height: 80vh;
     position: relative; 
+    display: flex;
 }
 
 .menu-story{
     font-family: 'Roboto', sans-serif; 
-   
+   width: 50%;
     color: white;
+    margin-top: 8em;
+    margin-left: 1em;
 }
 
 .menu-story h2{
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 100;
     text-transform: uppercase;
     margin-bottom: 40px;
@@ -149,9 +175,9 @@ header {
 }
 
 
-span{
+/* span{
     font-weight: bolder;
-}
+} */
 
 .menu-story p{
     padding: 0.3em;
@@ -160,21 +186,24 @@ span{
 
 }
 
-.menu-btn {
+#menu-btn {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+   color: white;
+    width: 30%;
+    padding: 23px 32px;
+    text-align: center;
     text-decoration: none;
-    background-color: rgb(240, 176, 57);
-    /* position: relative; */
-    left: 4em;
-    /* bottom: 1em; */
-    color: #fff;
-    padding: 0.5em 2em 0.5em 2em;
-    font-size: 1.5em;
-    border: 1px solid rgb(240, 176, 57);
-    border-radius: 10px;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    
 }
+
+
 .features{
     background-image: url('images/bgcolor.png');
-    height: 120vh;
+    /* height: 120vh; */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -220,7 +249,7 @@ span{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 40vh;
+    /* min-height: 40vh; */
     position: relative; 
     text-align: center;
 }
@@ -233,7 +262,8 @@ span{
 .review{
     color: #fff;
     font-size: 1.5em;
-    line-height: 1em;
+    /* line-height: 1em; */
+   
 
 }
 
@@ -245,7 +275,7 @@ span{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 50vh;
+    /* min-height: 50vh; */
     position: relative;
    
     
@@ -321,6 +351,14 @@ input {
     font-size: 0.5em;
     width: 100%;
 }
+input ::placeholder{
+    outline: none;
+}
+
+input :focus{
+    outline: none;
+    border: none;
+}
 
 
 .btn-container {
@@ -329,8 +367,7 @@ input {
   .button2 {
     background-color: #f0ad4e;
     border-color: #eea236;
-   
-    color: white;
+   color: white;
     width: 40vw;
     padding: 23px 32px;
     text-align: center;
@@ -371,198 +408,411 @@ ul{
     gap: 1.5em;
 }
 
+#container-box{
+    display: none;
+    margin-bottom: 1.5em;
+    align-items: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    border-radius: 2em;
+    color: white;
+    padding: 1rem;
+    box-shadow: 2px 2px 3px 3px #f0bb0d;;
+    /* width: 40%; */
+    margin-top: 2em;
+    animation: fadeIn 1.5s;
+    animation: fadeOut 1.5s;
+    animation-name: fadeIn;
+  
+  }
+  
+  @keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0}
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1}
+  }
 
 
+
+.items{
+   list-style-type: none;
+   display: flex;
+   text-decoration: none;
+   animation: fadeIn 1.5s;
+   
+}
+
+.items a{
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+   
+}
+
+.items li{
+    margin: 1em;
+    padding: 0.7em;
+    
+}
+
+.menu-text{
+    text-align: center;
+    background-color: #e8b718;
+}
+
+.drinks{
+    padding: 1em;
+}
 
 
 
 /* media query */
 
-@media only screen and (max-width : 980px){
-    
-    header {
-       
-        min-height: 270vh;
-        width: 70vh;
-    }
+
+   
 
     
+    
+    
 
-    .text{
-        
-        top: 6em;
-        padding: 8em;
-        text-align: center;
-        
-    }
-    .texts{
-        font-size:6em;
-    
-     }
-    .text p{
-        font-size: 6em;
-        top: 8em;
-    }
-    .card{
-        padding: 20px;
-        width: 90%;
-        /* margin: 40px;  */
-        display: block;
-        flex-direction: column;
-        font-size: 4em;
-        
-    }
-    .content {
-       margin: auto;
-        top: 50em;
-        display: block;
-        flex-direction: column;
-        
-        width: 70vh;
-    }
-    .section-body{
-        height: 40vh;
-        width: 70vh;
-        font-size: 26px;
-        
-    }
-    
-    .story{
-        top: 30em;
-        text-align: center;
-        margin: auto;
-        
-    }
-    
-    .texts{
-        font-size:8em;
-        
-     }
-      .menu{
+
+@media only screen and (max-width : 980px)
+     { 
+        *{
+            
+            overflow-x: hidden;
+        }
+
+        header {
        
-        min-height: 50vh;
-        width: 70vh;
-        text-align: center;
+            min-height: 150vh;
           
-    }
+           
+           
+        }
+        
+        .nav-menu{
+            position: fixed;
+                left: -100%;
+                top: 4rem;
+                flex-direction: column;
+                background-color: rgb(4, 21, 29);
+                width: 100%;
+                border-radius: 10px;
+                text-align: center;
+                transition: 0.3s;
+                animation: fadeIn 1s;
+              font: 1.5em sans-serif;
+                box-shadow:
+                    0 10px 27px rgba(0, 0, 0, 0.05);
+        }
+        
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1}
+          }
+        .nav-menu.active{
+            left: 0;
+        }
+        .hamburger{
+            display: block;
+            cursor: pointer;
+        }
+        
+        
+        
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+        
+        
     
-    .menu-story{
-        color: white;
-        padding: 150px 30px; 
-        margin: 50px;
+        .text{
+            
+            top: 10em;
+            padding: 5em;
+            text-align: center;
+            
+        }
+        .texts{
+            font-size:6em;
+        
+         }
+        .text p{
+            font-size: 6em;
+            top: 16em;
+        }
+        .card{
+            padding: 10px;
+            /* width: 50%; */
+            /* margin: 40px;  */
+            display: block;
+            flex-direction: column;
+            font-size: 2em;
+            margin: 1em ;
+            
+        }
+        .content {
+           
+            display: block;
+            flex-direction: column;
+            
+            /* width: 55vh; */
+        }
+        .section-body{
+            height: 40vh;
+          /* width: 55vh; */
+            font-size: 24px;
+            
+        }
+        
+        .story{
+            top: 30em;
+            text-align: center;
+            margin: auto;
+            width: 100%;
+            
+        }
+    
+        .story h1{
+            font-size: 3em;
+             
+         }
+        .story p{
+           font-size: 1.5em;
+            
+        }
+        
+        .texts{
+            font-size:8em;
+            
+         }
+        .menu{
+           
+            min-height: 50vh;
+            /* width: 55vh; */
+            text-align: center;
+            display: block;
+              
+        }
+        
+        .menu-story{
+            color: white;
+            width: 100%;
+            /* padding: 1em 2em;  */
+           
+            
+           
+        }
+        .menu-story h2{
+            font-size: 5em;
+            font-weight: bolder;
+            
+           
+        }
+        
+       .menu-story p{
+           margin: 1px;
+           padding: 0.5em;
+           font-size: 1.5em;
+           width: 100%;
+       }
+        #menu-btn {
+            margin: 5px;
+            font-size: 4em;
+            width: 60%;
+            border-radius: 0.2em;
+            
+        } 
+    
+        .features{
+            
+            height: 165vh;
+            /* width: 55vh; */
+            
+            
+        }
+        .feature{
+            display: block;
+            flex-direction: column;
+           
+            margin: auto;
+            align-content: center;
+            /* padding: 5em 10em; */
+          
+          
+        }
+        
+        .feature-post{
+            width: 100%;
+            font-size: 2em;
+            margin: 1.6em 0.2em;
+           
+        }
+        .feature-post img{
+            width: 50%;
+            height: 50%;
+        }
+    
+        .feature-post.active{
+            width: 100%;
+            
+            font-size: 3em;
+        }
+    
        
-    }
+        .reviews .fa-star{
+           
+           font-size: 2em;
+           padding: 1.5em;
+           font-weight: bolder;
+           
+            
+        }
+        /* .reviews{
+            width: 55vh;
+        } */
     
-   .menu-story p{
-       padding: 100px 20px;
-   }
-    .menu-btn {
-        margin: 20px;
-        font-size: 1.5em;
-    } 
-
-    .features{
-        
-        height: 135vh;
-        width: 70vh;
-        
-        
-    }
-    .feature{
-        display: block;
-        flex-direction: column;
-        width: 70vh;
-        margin: auto;
-        align-content: center;
-        /* padding: 5em 10em; */
-      
-      
-    }
-    
-    .feature-post{
-        width: 100%;
-        padding-top: 4em 5em;
-        font-size: 2em;
-        margin: 4em 1em;
-        height: 50%;
-    }
-    .feature-post.active{
-        width: 100%;
-        
-        font-size: 4em;
-    }
-
-    .reviews{
-       
-        width: 70vh;
-       
-        
-    }
-    .customer{
-        
-        min-height: 90vh;
-        position: relative;
-        width: 70vh;
-    }
-    
-    .customers{
-        display: block;
-        justify-content: space-between;
-        padding: 50px 20px;
-        margin: 0.5em 28px;
-       } 
-    
-    .icons{
-      
-    font-size: 13em;
-    margin: 1.5em 28px;
-    
-    }
-    .icons h2{
-        font-size: 1.6em;
-        font-weight: lighter;
-    }
-    
-    .icons p{
-        font-size: 50px;
-    
-    }
-    .table{
-        min-height: 80vh;
-        display: block;
-        justify-content: space-around;
-        width: 70vh;
-       
+        .review{
+           
+            font-size: 3em;
+            /* width: 50%; */
+            margin: auto;
          
-    }
-    .ltable{
-      
-        font-size: 2.2em;
-       margin-top: 1em;
-    }
-    
-    .rtable{
-        display: block;
-        width: 70vw;
-        font-size: 1.5em;  
-    }
-    
-    .btn-container {
-        margin-top: 4rem;
-       
-      }
-      .button2 {
-        width: 80vw;
-        font-size: 2em;
-       
-      }
-      footer{
+           
+            
+        }
+        .customer{
+            
+            min-height: 90vh;
+            position: relative;
+            /* width: 55vh; */
+        }
         
-       width: 70vh;
-       
-    
-    }
-    
-    
-    
+        .customers{
+            display: block;
+            justify-content: space-between;
+            padding: 15px ;
+            margin: 0.2em ;
+           } 
+        
+        .icons{
+          
+        font-size: 8em;
+        margin: 0.5em ;
+        /* padding: 1em; */
+        
+        }
+        .icons h2{
+            font-size: 1.3em;
+            font-weight: lighter;
+        }
+        
+        .icons p{
+            font-size: 50px;
+        
+        }
+        .table{
+            min-height: 80vh;
+            display: block;
+            
+            /* width: 55vh; */
+            
+           
+             
+        }
+        .ltable{
+          
+           font-size: 2.5em;
+           margin: auto;
+           
+        }
+        
+        .rtable{
+            display: block;
+            margin-top: auto;
+            width: 90%;
+            margin-left: 2em;
+            font-size: 1.5em;  
+        }
+        input{
+            font-size: 1.1em;
+        }
+        
+        .btn-container {
+            margin-top: 4rem;
+           
+          }
+          .button2 {
+            
+            font-size: 1.5em;
+            width: 100%;
+           
+          }
+          
+          /* width: 55vh;  */
+          
+         
+          
+          @keyframes fadeOut {
+            from {opacity: 1;}
+            to {opacity: 0}
+          }
+        
+          @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1}
+          }
+        
+        
+        
+        .items{
+           list-style-type: none;
+           display: flex;
+           text-decoration: none;
+           animation: fadeIn 1.5s;
+           
+        }
+        
+        .items a{
+            list-style-type: none;
+            color: white;
+            text-decoration: none;
+           
+        }
+        
+        .items li{
+            margin: 1em;
+            padding: 0.7em;
+            
+        }
+        
+        .menu-text{
+            text-align: center;
+            background-color: #e8b718;
+        }
+        
+        .drinks{
+            padding: 1em;
+        }
+        
+        
+          
+        
+        
+          
+
+
 }
